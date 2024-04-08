@@ -1,0 +1,31 @@
+Install-Package AForge.Imaging
+
+using System;
+using System.Drawing;
+using AForge.Imaging.Filters;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Read the image
+        Bitmap img = new Bitmap("input_image.jpg");
+
+        // Apply median filter to remove noise
+        Median filter = new Median();
+        Bitmap filteredImg = filter.Apply(img);
+
+        // Display the original and filtered images (optional)
+        ShowImage(img, "Original Image");
+        ShowImage(filteredImg, "Filtered Image");
+
+        Console.ReadLine();
+    }
+
+    static void ShowImage(Bitmap img, string title)
+    {
+        Console.WriteLine(title);
+        img.Show();
+    }
+}
+  
