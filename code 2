@@ -1,0 +1,19 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+public static class BitmapExtensions
+{
+    public static void Show(this Bitmap bmp, string title = "")
+    {
+        var form = new Form
+        {
+            Text = title,
+            ClientSize = bmp.Size
+        };
+
+        form.Controls.Add(new PictureBox { Image = bmp, Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.CenterImage });
+
+        form.ShowDialog();
+    }
+}
