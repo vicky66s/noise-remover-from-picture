@@ -11,7 +11,7 @@ class Program
         // Read the image
         Bitmap img = new Bitmap("input_image.jpg");
 
-        // Apply median filter to remove noise.
+        // Apply median filter to remove noise
         Median filter = new Median();
         Bitmap filteredImg = filter.Apply(img);
 
