@@ -1,5 +1,5 @@
+// 00000000
 Install-Package AForge.Imaging
-
 using System;
 using System.Drawing;
 using AForge.Imaging.Filters;
