@@ -1,4 +1,4 @@
-// 00000000
+// 0
 Install-Package AForge.Imaging
 using System;
 using System.Drawing;
